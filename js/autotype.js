@@ -1,16 +1,13 @@
+// Função escrita por Guilherme Grillo
 $(function(){
-
 	var words = ['SOBRE O RAFAEL'];
 	var indexWord = 0;
 	var indexChar = 0;
 	var interval;
-
-
 	var elInput = $('.sobre input[type=text]'); 
 
 	// elInput.focus();
 	
-
 	run();
 
 	function run(){
@@ -29,11 +26,7 @@ $(function(){
 					setTimeout(function(){
 						run();
 					},1600)
-				}
-				
-		},400);
-			
+				}			
+		},400);	
 	}
-
-
 })

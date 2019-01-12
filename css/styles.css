@@ -1,3 +1,5 @@
+/* Efeitos básicos de toda a página */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,12 +12,13 @@ html, body {
 
 body {
     font-family: 'Oswald', sans-serif;
-    /* overflow: hidden; */
 }
 
 .clear {
     clear: both;
 }
+
+/* Menu Lateral */
 
 .menuLateral {
     background-color: rgba(0, 0, 0, 0.8);
@@ -32,11 +35,9 @@ body {
 .imgLogo {
     width: 90%;
     height: 50px;
-    /* border: 1px solid green; */
     padding-top: 25%;
     position: relative;
     top: 30px;
-    /* top: 30px; */
     left: 0;
     background-image: url('../img/logoPequeno.png');
     background-size: 100% 100%;
@@ -46,7 +47,6 @@ body {
 }
 
 nav {
-    /* border: 1px solid red; */
     position: relative;
     text-align: center;
 }
@@ -57,14 +57,12 @@ nav li a {
 }
 
 .menuLateral nav ul {
-    /* margin-top: 120px; */
     list-style-type: none;
     line-height: 50px;
     display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
     color: white;
-   /* border: 1px solid red;  */
 }
 
 .menuLateral nav ul li {
@@ -72,7 +70,6 @@ nav li a {
     font-family: 'Oswald', sans-serif;
     margin: 5px 0;
     font-size: 18px;
-    /* border: 1px solid red; */
 }
 
 .menuLateral nav ul li a:hover {
@@ -90,9 +87,7 @@ nav li a {
     z-index: 3;
 }
 
-
 .menuMobile ul {
-    /* border: 1px solid white; */
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -102,27 +97,10 @@ nav li a {
     font-size: 28px;
 }
 
-.fa-times {
-    cursor: pointer;
-    display: none;
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(-100%);
-    margin: 15px;
-    z-index: 4;
-}
-
-    
+/* Section Home */
 
 .mainHomePage {
     width: 100%;
-    /* height: 100vh; */
-    /* margin-top: -15vh; */
-    /* margin-left: 10vw; */
-    /* background: #ccc; */
     background-image: url('https://wallpapershome.com/images/pages/pic_h/16202.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,7 +109,6 @@ nav li a {
 
 .home {
     height: 100vh;
-    /* width: 85vw; */
     margin-left: 15vw;
     position: relative;
     padding: 0 2%;
@@ -150,19 +127,7 @@ canvas {
     height: inherit;
 }
 
-/* .sobreImg {
-    border: 1px solid red;
-    position: relative;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-    display: inline-block;
-    
-} */
-
-
 .about {
-    /* border: 2px solid red; */
     position: relative;
     top: 13%;
     left: 50%;
@@ -208,7 +173,6 @@ i.fa-angle-double-down {
     transform: translateX(-50%);
     color: white;
     font-size: 45px;
-    /* bottom: -120px; */
     animation-name: arrowBounce;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -235,11 +199,27 @@ i.fa-angle-double-down {
     }
 }
 
+/* Menu Mobile */
 .fa-bars {
     color: white;
     font-size: 35px;
     display: none;
 }
+
+.fa-times {
+    cursor: pointer;
+    display: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+    margin: 15px;
+    z-index: 4;
+}
+
+/* Section Projetos */
 
 section.projetos {
     text-align: center;
@@ -255,45 +235,33 @@ section.projetos {
 .projetos h1 {
     text-transform: uppercase;
     color: white;
-    /* position: relative; */
-    /* top: 15px; */
     font-size: 34px;
     margin-bottom: 50px;
-}
-
-.slider {
-    position: static;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%,-50%); */
-    width: 70%;
-    max-width: 850px;
-    /* background: #ccc; */
-    /* padding: 25px; */
-    /* background: #ccc; */
-    
-}
-
-.sliderSingle {
-    /* height: 100px; */
-    padding-top: calc(10% * 0.6);
-    /* background: red; */
-    display: inline-block;
-    margin: 0 10px;
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 
 .projetosWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 4px solid white; */
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.slider {
+    position: static;
+    width: 70%;
+    max-width: 850px;
+}
+
+.sliderSingle {
+    padding-top: calc(10% * 0.6);
+    display: inline-block;
+    margin: 0 10px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* Estilos para o plugin Slick */
@@ -330,11 +298,12 @@ section.projetos {
 
 li.slick-active button {
 	background-color: #686464;
-    /* color: #d8d8d85e; */
     color: transparent;
 }
 
 .slick-slide:focus{outline: none}  
+
+/* Section Sobre */
 
 section.sobre {
     text-align: center;
@@ -342,7 +311,6 @@ section.sobre {
     padding-right: 2%;
     min-height: 100vh;
     height: 100%;
-    /* background-color: rgb(66, 62, 62); */
     background-image: url('../img/pollygon3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -368,7 +336,6 @@ section.sobre {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     text-align: center;
-    /* margin-bottom: 15px; */
     padding-bottom: 30px;
     display: block;
     margin: 0 auto;
@@ -398,10 +365,7 @@ section.sobre {
     padding: 5px;
     color: white;
     line-height: 35px;
-    /* float: left; */
-    /* flex-direction: row; */
     width: 50%;
-    /* border: 1px solid white; */
 }
 
 
@@ -420,30 +384,21 @@ section.sobre {
 
 .skills {
     padding: 5px;
-    /* float: right; */
     width: 50%;
     color: white;
-    /* flex-direction: row; */
-    /* border: 1px solid white; */
 }
 
 .sobreSkills {
-    /* border: 1px solid white; */
-    /* padding: 0 15px; */
     padding-left: 30px;
 }
 
 .skillSingle {
     max-width: 400px;
     text-align: initial;
-    /* position: relative; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
     margin: 20px auto;
 }
 
 .skillLabel {
-    /* background-color: red; */
     font-size: 16px;
     word-wrap: break-word;
     display: inline-block;
@@ -475,10 +430,10 @@ section.sobre {
     left: 0;
 } 
 
+/* Section Contato */
+
 section.contato {
     height: 100%;
-    /* padding-top: 60px; */
-    /* padding-bottom: 60px; */
     background-color: #ccc;
     background-image: url('../img/pollygon4.jpg');
     background-size: 100% 100%;
@@ -496,15 +451,12 @@ section.contato {
 }
 
 .contatoContainer {
-    /* border: 1px solid white; */
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .contatoSingle {
-    /* background: black; */
-    /* border: 2px solid white; */
     width: 33.33%;
     height: 100px;
     float: left;
@@ -517,9 +469,6 @@ section.contato {
     font-size: 70px;
     line-height: 100px;
     cursor: pointer;
-    /* background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(221, 21, 154)); */
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
 }
 
 .contatoIcon.fa-instagram:hover {
@@ -588,9 +537,6 @@ section.contato {
 
 
     .sobreAutor {
-        /* float: none; */
-        /* display: block; */
-        /* width: 100%; */
         flex-direction: column;
         width: 100%;
     }
@@ -598,8 +544,6 @@ section.contato {
     .skills {
         flex-direction: column;
         width: 100%;
-        /* float: none; */
-        /* width: 100%; */
     }
 
     .sobreInfosContainer {
@@ -615,7 +559,6 @@ section.contato {
 
     section.sobre {
         padding: 30px 2%;
-        /* padding-left: 2%; */
         height: auto;
     }
 
@@ -625,7 +568,6 @@ section.contato {
     }
 
     .mainHomePage {
-        /* margin-top: -15vh; */
         height: 100vh;
     }
 
@@ -641,7 +583,6 @@ section.contato {
 
     .imgLogo {
         max-width: 200px;
-        /* width: 35%; */
         padding: 15px 0;
         padding-top: 40px;
         position: relative;
@@ -693,14 +634,11 @@ section.contato {
     .skillLabel {
         font-size: 10px;
     }
-
-
 }
 
 @media screen and (max-width: 400px) {
     .contatoSingle {
         width: 100%;
-        /* float: none; */
         margin: 0;
         float: none;
         height: 80px;
@@ -710,8 +648,6 @@ section.contato {
         line-height: 80px;
         font-size: 50px;
     }
-
-
 
     .fa-bars {
         font-size: 30px;

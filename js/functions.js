@@ -1,44 +1,39 @@
 $(function(){
     var menuLateral = $('.menuLateral');
-    var navDesktop = $('nav.menuDesktop');
-    var imgLogo = $('.imgLogo');
     var menuLateralAltura = menuLateral.height();
+    var navDesktop = $('nav.menuDesktop');
     var navDesktopAltura = navDesktop.height();
     var seta = $('.fa-angle-double-down');
-    var about = $('.about');
-    var dist = calculaDist();
-    var previousScrollPosition;
+    var distSetaAteTopo = calculaDist();
     var menuMobile = $('.fa-bars');
     var slideProjeto = $('.slider');
 
     centralizarMenuDesktop();
 
 
-    //Some com o menuMobile e o botão de fechar
+    //Exibe o menu Mobile
     menuMobile.click(function(){
         $('.menuMobile').fadeIn();
         $('.fa-times').fadeIn();
     })
 
-    //Some com o menuMobile e o botão de fechar
+    //Some com o menuMobile ao clicar no botão de fechar
     $('.fa-times').click(function(){
         $('.menuMobile').fadeOut();
         $(this).fadeOut();
     })
-
     
     //Recalcula a distância do nosso Menu ao entrarmos no responsivo.
-    //Recalcula o offTop da variável dist (responsável pelo nosso botão de scrollDown na página inicial).
+    //Recalcula o offTop da variável distSetaAteTopo (responsável pelo nosso botão de scrollDown na página inicial).
     $(window).resize(function(){
         centralizarMenuDesktop();
-        dist = calculaDist();
-        // verificaScrollDirecao();
+        distSetaAteTopo = calculaDist();
         // location.reload();
     })
 
-    //Animação ao clicarmos no botão
+    //Animação ao clicarmos na seta
     seta.click(function(){
-        $('html, body').animate({'scrollTop': dist}, 1000);
+        $('html, body').animate({'scrollTop': distSetaAteTopo}, 1000);
     })
 
     //TO DO
@@ -78,11 +73,10 @@ $(function(){
     });
     
 
-    
+    // Funções
     function centralizarMenuDesktop() {
         navDesktop.css('top', (menuLateralAltura/2) - (navDesktopAltura/2) - 54);
     }
-
 
 
     function verificarLinksProjetos(el) {
@@ -103,28 +97,11 @@ $(function(){
 
     function calculaDist() {
         if ($(window).width() > 768) {
-            dist = $('.projetos').offset().top;
+            distSetaAteTopo = $('.projetos').offset().top;
         } else {
-            dist = $('.projetos').offset().top - menuLateralAltura;
+            distSetaAteTopo = $('.projetos').offset().top - menuLateralAltura;
         }
-            return dist
+            return distSetaAteTopo
     }
 
-    function verificaScrollDirecao() {
-        if ($(window).width() > 768) {
-            menuLateral.show();
-        } else {
-
-        var currentScrollPosition= $(window).scrollTop();
-        
-        if (currentScrollPosition > previousScrollPosition) {
-        //   console.log('down')
-          menuLateral.stop().fadeIn();
-        }else if(currentScrollPosition < previousScrollPosition){
-        //   console.log('up')
-          menuLateral.stop().fadeOut();
-        }
-        previousScrollPosition = currentScrollPosition;
-    }
-}
 })

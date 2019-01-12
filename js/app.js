@@ -1,3 +1,4 @@
+// Arquivo de configuração do particles
 particlesJS('particles-js',
 
 {
