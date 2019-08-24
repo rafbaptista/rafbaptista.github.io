@@ -1,15 +1,10 @@
-$(function(){
-    var menuLateral = $('.menuLateral');
-    var menuLateralAltura = menuLateral.height();
-    var navDesktop = $('nav.menuDesktop');
-    var navDesktopAltura = navDesktop.height();
-    var seta = $('.fa-angle-double-down');
+$(function(){    
+    var menuLateralAltura = $('.menuLateral').height();    
+    var seta = $('.fa-angle-double-down');    
     var distSetaAteTopo = calculaDist();
     var menuMobile = $('.fa-bars');
     var slideProjeto = $('.slider');
-
-    centralizarMenuDesktop();
-
+    
 
     //Exibe o menu Mobile
     menuMobile.click(function(){
@@ -24,27 +19,48 @@ $(function(){
     })
     
     //Recalcula a distância do nosso Menu ao entrarmos no responsivo.
-    //Recalcula o offTop da variável distSetaAteTopo (responsável pelo nosso botão de scrollDown na página inicial).
-    $(window).resize(function(){
-        centralizarMenuDesktop();
-        distSetaAteTopo = calculaDist();
-        // location.reload();
+    $(window).resize(function(){         
+        distSetaAteTopo = calculaDist();        
     })
 
-    //Animação ao clicarmos na seta
+     //Animação ao clicarmos na seta
     seta.click(function(){
         $('html, body').animate({'scrollTop': distSetaAteTopo}, 1000);
     })
 
     //TO DO
-    $('.sliderSingle').click(function(){
-        var el = $(this);
-        verificarLinksProjetos(el);
+    // $('.sliderSingle').click(function(){
+    //     var el = $(this);
+    //     verificarLinksProjetos(el);
+    // })
+
+    
+
+    function verificarLinksProjetos(el) {
+        console.log(el.attr('attr'));
+    }
+
+    $('.mockup1').click(function(){
+        // var el = $(this);        
+        window.open("projetos/Projeto02/index.html");
     })
+
+    $('.mockup2').click(function(){
+        window.open("projetos/Projeto03/index.html");
+    })
+
+    $('.mockup3').click(function(){            
+        window.open("projetos/Projeto04/index.html");
+    })
+
+    $('.mockup4').click(function(){             
+        window.open("projetos/Projeto05/index.html");
+    })
+
 
     //Scroll suave no menu
     $('.menuDesktop ul li a').click(scrollSuave);
-
+    $('section.mainHomePage a').click(scrollSuave);
 
     
     //Configuração do slider
@@ -72,16 +88,9 @@ $(function(){
         $('html, body').animate({'scrollTop': offsetTop - menuLateralAltura},1000)
     });
     
-
-    // Funções
-    function centralizarMenuDesktop() {
-        navDesktop.css('top', (menuLateralAltura/2) - (navDesktopAltura/2) - 54);
-    }
-
-
-    function verificarLinksProjetos(el) {
-        console.log(el.attr('attr'));
-    }
+    
+   
+  
 
     function scrollSuave() {
         //ID de cada elemento que clicarmos
@@ -105,3 +114,5 @@ $(function(){
     }
 
 })
+
+
