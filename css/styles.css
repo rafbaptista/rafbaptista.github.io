@@ -465,26 +465,27 @@ section.contato {
 
 .contatoIcon {
     color: white;
-    font-size: 70px;
-    /* line-height: 100px; */
+    font-size: 70px;    
     cursor: pointer;
     
 }
 
-.contatoIcon.fa-instagram:hover {
-     /* color:#59925e71;  */
+.contatoIcon.fa-instagram:hover {     
      background-image: -webkit-linear-gradient(45deg,#833AB4, #F77737, #FFDC80);     
      -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-    
+     -webkit-text-fill-color: transparent;    
 }
 
-.contatoIcon.fa-linkedin:hover {            
-    color: rgb(87, 125, 179);
+.contatoIcon.fa-linkedin:hover {                    
+    background-image: -webkit-linear-gradient(45deg,rgb(141, 156, 177), rgb(87, 125, 179), rgb(5, 63, 145));       
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.contatoIcon.fa-facebook-square:hover {
-    color:rgb(46, 78, 146);;	
+.contatoIcon.fa-facebook-square:hover {    
+    background-image: -webkit-linear-gradient(225deg,rgb(102, 111, 131), rgb(46, 78, 146), rgb(10, 52, 143));       
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contatoIcon.fa-envelope:hover {
@@ -494,7 +495,10 @@ section.contato {
 }
 
 .contatoIcon.fa-skype:hover {
-    color:#12A5F4;
+    /* color:#12A5F4; */
+    background-image: -webkit-linear-gradient(45deg,rgb(114, 180, 216), rgb(18, 165, 244), rgb(6, 70, 104));          
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contatoIcon.fa-github:hover {
