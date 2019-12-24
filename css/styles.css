@@ -141,7 +141,7 @@ canvas {
 }
 
 .sobreImg img {
-    max-width: 180px;
+    max-width: 180px; 
     max-height: 180px;
     width: 100%;
     height: 100%;
