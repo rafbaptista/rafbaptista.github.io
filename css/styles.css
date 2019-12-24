@@ -149,7 +149,7 @@ canvas {
     background-image: linear-gradient(45deg,#7797CA, #E34644, #f2f6fc);
     padding: 4px;    
     z-index: 2;
-    position: relative;    
+    position: relative; 
 }
 
 
